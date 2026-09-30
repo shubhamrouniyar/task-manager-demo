@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: task-manager-api
+    runtime: docker
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/tasks
+    envVars:
+      - key: PORT
+        value: "8080"
